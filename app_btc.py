@@ -8,7 +8,8 @@ def get_blocks_until_halving():
     current_block_height = data["data"]["blocks"]
     blocks_day = data["data"]["blocks_24h"]
     transactions_day = data["data"]["transactions_24h"]
-    largest_day_usd = data["data"]["largest_transaction_24h"]
+    largest_day_usd = data["data"]["largest_transaction_24h"]["value_usd"]
+    largest_day_usd = '{:0,.2f}'.format(float(largest_day_usd))
     next_halving_block = ((current_block_height // 210000) +1) * 210000
     
     # Calculate
@@ -36,7 +37,7 @@ def main():
     print('')
     print(f"Blocks 24h: {halving_data[3]}")
     print(f"Transactions 24h: {halving_data[4]}")
-    print(f"Largest Transaction 24h: {halving_data[4]} USD")
+    print(f"Largest Transaction 24h: {halving_data[5]} USD")
 
 if __name__ == "__main__":
     main()
