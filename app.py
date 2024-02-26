@@ -35,6 +35,5 @@ def index():
     return render_template('index.html', halving_data=halving_data, time_remaining=time_remaining)
 
 
-
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
