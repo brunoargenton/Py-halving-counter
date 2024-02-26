@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>BTC Halving Countdown</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Bitcoin Halving Countdown</h1>
+            <p class="lead">This is an interface showing the BTC haling countdown interface</p>
+            <hr class="my-4">
+            <p>See Below for the current statistics and time remaining:</p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card text-white bg-primary mb-3">
+                    <div class="card-header">Halving Details</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Current Block Height: {{ halving_data[2] }}</h5>
+                        <p class="card-text">Next Halving Block: {{ halving_data[1] }}</p>
+                        <p class="card-text">Blocks Remaining: {{ halving_data[0] }}</p>
+                        <p class="card-text">Time Remaining: {{ time_remaining }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-white bg-secondary mb-3">
+                    <div class="card-header">Last 24 Hours Activity</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Blocks: {{ halving_data[3] }} </h5>
+                        <p class="card-text">Transactions: {{ halving_data[4] }}</p>
+                        <p class="card-text">Largest Transaction: {{ halving_data[5] }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
