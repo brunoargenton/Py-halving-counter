@@ -1,4 +1,3 @@
-This Python application provides a simple tool to calculate the estimated time until the next Bitcoin halving based on the current block height. 
-It uses the historical pattern of Bitcoin halvings, which occur approximately every 210,000 blocks, to estimate the remaining blocks until the next halving and the time in hours until that event.
+This Python application offers a straightforward utility for estimating the time until the next Bitcoin halving event. Leveraging the historical occurrence of Bitcoin halvings — which typically happen every 210,000 blocks — the tool calculates the number of remaining blocks and the corresponding time until the upcoming halving. It fetches real-time data on the current block height from the Blockchair API, ensuring up-to-date predictions. Users can easily access insights into the current blockchain status, including the total number of blocks mined in the last 24 hours, the volume of transactions, and the size of the largest transaction, all presented in a user-friendly web interface powered by Flask and enhanced with Bootstrap for a responsive design.
 
 Bruno Argenton
