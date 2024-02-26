@@ -2,6 +2,8 @@ from flask import Flask, render_template
 import requests
 from datetime import datetime, timedelta
 
+app = Flask(__name__)
+
 def get_blocks_until_halving():
     # Get the current block height
     response = requests.get("https://api.blockchair.com/bitcoin/stats")
